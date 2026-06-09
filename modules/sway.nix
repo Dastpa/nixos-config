@@ -4,6 +4,7 @@
   programs.sway = {
     enable = true;
     wrapperFeatures.gtk = true;
+    extraOptions = [ "--unsupported-gpu" ];
   };
 
   programs.waybar.enable = true;
@@ -18,6 +19,11 @@
     slurp
     wl-clipboard
   ];
+
+  environment.sessionVariables = {
+    WLR_NO_HARDWARE_CURSORS = "1";
+    NIXOS_OZONE_WL = "1";
+  };
 
   services.dbus.enable = true;
 
