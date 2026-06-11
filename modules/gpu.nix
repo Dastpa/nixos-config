@@ -3,6 +3,7 @@
 {
   services.xserver.videoDrivers = [ "nvidia" ];
 
+  hardware.graphics.enable = true;
   hardware.nvidia = {
     package = config.boot.kernelPackages.nvidiaPackages.stable;
 
@@ -11,4 +12,7 @@
     open = false;
   };
 
+  environment.sessionVariables = {
+    GBM_BACKEND = "nvidia-drm";
+  };
 }
