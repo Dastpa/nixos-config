@@ -1,8 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  # services.displayManager.defaultSession = "sway";
-
   programs.sway = {
     enable = true;
     wrapperFeatures.gtk = true;

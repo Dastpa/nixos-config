@@ -8,6 +8,9 @@
     ../../modules/sway.nix
     ../../modules/displaylink.nix
     ../../modules/audio.nix
+   
+    # Theming
+    ../../modules/desktop/theme.nix
   ];
 
   nixpkgs.config.allowUnfree = true;  
@@ -36,12 +39,20 @@
   environment.systemPackages = with pkgs; [
     firefox
     pciutils
+    zed-editor
+    home-manager
   ];
 
   environment.variables = {
     XKB_DEFAULT_LAYOUT = config.services.xserver.xkb.layout;
     XKB_DEFAULT_VARIANT = config.services.xserver.xkb.variant;
   };
+
+  fonts.packages = with pkgs; [
+    jetbrains-mono
+    # If you want the Nerd Font version (recommended for icons in terminal):
+    # (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+  ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
