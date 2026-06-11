@@ -24,10 +24,24 @@
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" "video" "input" ];
   };
+  
+  console.useXkbConfig = true;
+
+  services.xserver = {
+    enable = true;
+    xkb.layout = "gb";
+    xkb.variant = "";
+  };
    
   environment.systemPackages = with pkgs; [
     firefox
+    pciutils
   ];
+
+  environment.variables = {
+    XKB_DEFAULT_LAYOUT = config.services.xserver.xkb.layout;
+    XKB_DEFAULT_VARIANT = config.services.xserver.xkb.variant;
+  };
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
