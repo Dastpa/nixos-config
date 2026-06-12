@@ -3,7 +3,6 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ../../modules/home.nix
     ../../modules/base.nix
     ../../modules/gpu.nix
     ../../modules/sway.nix
@@ -13,6 +12,12 @@
     # Theming
     ../../modules/desktop/theme.nix
   ];
+
+  home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    users.patrick = import ../../modules/home.nix;
+  };
 
   system.stateVersion = "25.05";
 
