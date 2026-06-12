@@ -56,6 +56,7 @@
       pciutils
       zed-editor
       home-manager
+      gnumake
     ];
 
     variables = {

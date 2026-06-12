@@ -9,5 +9,6 @@
 
   home.file = {
     ".config/foot/foot.ini".source = ../config/foot.ini;
+    ".config/sway/config".source = ../config/sway/config;
   };
 }
