@@ -3,6 +3,7 @@
 {
   imports = [
     ./hardware-configuration.nix
+    ../../modules/home.nix
     ../../modules/base.nix
     ../../modules/gpu.nix
     ../../modules/sway.nix
