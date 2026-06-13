@@ -18,6 +18,7 @@
     grim
     slurp
     wl-clipboard
+    mpvpaper
   ];
 
   services.dbus.enable = true;

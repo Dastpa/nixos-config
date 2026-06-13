@@ -16,6 +16,7 @@ set $menu wmenu-run
 
 ### Output configuration
 output * bg /home/patrick/nixos-config/assets/wallpapers/bg2.png fill
+# exec mpvpaper -o "no-audio loop" * /home/patrick/nixos-config/assets/wallpapers/bg3.mp4
 
 output "DVI-I-1" disable
 output "DVI-I-2" disable
