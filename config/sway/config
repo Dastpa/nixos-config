@@ -187,4 +187,11 @@ bar {
     position top
 }
 
+# Custom stuff
+default_border pixel 2
+default_floating_border pixel 2
+
+gaps outer 8
+gaps inner 8
+
 include /etc/sway/config.d/*

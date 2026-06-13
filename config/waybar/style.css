@@ -9,10 +9,11 @@
 }
 
 #waybar {
-    background-color: rgba(19, 13, 13, 0.5);
+    background-color: rgba(19, 13, 13, 1);
     color: white;
-    font-family: "Arimo Nerd Font", "Font Awesome 6 Free";
-    font-size: 9.5pt;
+    font-family: "Jetbrains Mono NL", "Font Awesome 6 Free";
+    font-size: 11pt;
+    font-weight: 800;
 }
 
 #window,
@@ -35,19 +36,6 @@
     padding-right: 4px;
 }
 
-#workspaces button.focused,
-#backlight,
-#custom-keyboard-layout,
-#battery,
-#cpu,
-#memory,
-#temperature,
-#network,
-#pulseaudio,
-#trayR {
-    border-bottom: 2.5px solid;
-}
-
 /* ---Left--- */
 #workspaces button {
     padding-left: 4px;
@@ -61,7 +49,8 @@
 }
 
 #workspaces button.focused {
-    border-bottom-color: #df4a16;
+    border: 2.5px solid;
+    border-color: #693e8a;
     background-color: rgb(61, 56, 56);
 }
 

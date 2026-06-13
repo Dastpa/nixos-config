@@ -2,14 +2,8 @@
   "layer": "top",
   "position": "top",
   "height": 24,
-  "modules-left": [
-    "sway/workspaces",
-    "custom/scratchpad-indicator",
-    "custom/separator",
-    "clock",
-    "idle_inhibitor",
-  ],
-  "modules-center": ["sway/mode"],
+  "modules-left": ["sway/workspaces"],
+  "modules-center": ["clock"],
   "modules-right": [
     "custom/keyboard-layout",
     "pulseaudio",
@@ -21,14 +15,6 @@
     "custom/separator",
     "tray",
   ],
-
-  "idle_inhibitor": {
-    "format": "{icon}",
-    "format-icons": {
-      "activated": "",
-      "deactivated": "",
-    },
-  },
 
   "sway/window": {
     "max-length": 50,
@@ -62,13 +48,13 @@
   "sway/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
-    "format": "{name}: {icon}",
+    "format": "{name}",
     "format-icons": {
-      "1": "",
-      "2": "",
-      "3": "",
-      "4": "",
-      "7": "",
+      // "1": "",
+      // "2": "",
+      // "3": "",
+      // "4": "",
+      // "7": "",
       "urgent": "",
       "focused": "",
       "default": "",

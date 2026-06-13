@@ -25,7 +25,12 @@
 
   users.users.patrick = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "video" "input" ];
+    extraGroups = [
+      "wheel"
+      "networkmanager"
+      "video"
+      "input"
+    ];
   };
 
   networking = {
@@ -34,7 +39,10 @@
   };
 
   nixpkgs.config.allowUnfree = true;
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   # Timezone
   time.timeZone = "Europe/London";
@@ -57,6 +65,8 @@
       ncdu
       steam
       btop
+      nixd
+      nil
     ];
 
     variables = {
