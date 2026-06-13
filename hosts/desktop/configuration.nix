@@ -9,6 +9,7 @@
     ../../modules/displaylink.nix
     ../../modules/audio.nix
     ../../modules/gaming.nix
+    ../../modules/realtek.nix
   ];
 
   home-manager = {
@@ -68,6 +69,7 @@
       btop
       nixd
       nil
+      usbutils
     ];
 
     variables = {
