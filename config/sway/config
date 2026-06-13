@@ -15,7 +15,7 @@ set $term foot
 set $menu wmenu-run
 
 ### Output configuration
-output * bg /home/patrick/nixos-config/assets/wallpapers/background.png fill
+output * bg /home/patrick/nixos-config/assets/wallpapers/bg2.png fill
 
 output "DVI-I-1" disable
 output "DVI-I-2" disable
