@@ -8,9 +8,6 @@
     ../../modules/sway.nix
     ../../modules/displaylink.nix
     ../../modules/audio.nix
-
-    # Theming
-    ../../modules/desktop/theme.nix
   ];
 
   home-manager = {
