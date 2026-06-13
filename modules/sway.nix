@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   programs.sway = {
@@ -10,7 +10,14 @@
   programs.waybar.enable = true;
 
   environment.systemPackages = with pkgs; [
-    sway waybar wofi foot mako grim slurp wl-clipboard
+    sway
+    waybar
+    wofi
+    foot
+    mako
+    grim
+    slurp
+    wl-clipboard
   ];
 
   services.dbus.enable = true;
