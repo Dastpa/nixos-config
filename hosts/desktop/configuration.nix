@@ -57,6 +57,9 @@
       zed-editor
       home-manager
       gnumake
+      ncdu
+      steam
+      btop
     ];
 
     variables = {
