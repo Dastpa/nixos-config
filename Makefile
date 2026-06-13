@@ -1,4 +1,4 @@
-.PHONY: full-rebuild
+.PHONY: rebuild
 rebuild:
 	sudo nixos-rebuild switch --flake ~/nixos-config#desktop
 
