@@ -8,6 +8,7 @@
     ../../modules/sway.nix
     ../../modules/displaylink.nix
     ../../modules/audio.nix
+    ../../modules/gaming.nix
   ];
 
   home-manager = {

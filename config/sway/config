@@ -191,7 +191,53 @@ bar {
 default_border pixel 2
 default_floating_border pixel 2
 
+# --- Backgrounds & Dark Tones ---
+# Default Background (Deep dark gray)
+set $base00 #282828
+# Lighter Background (Status bars, line highlights)
+set $base01 #3c3836
+# Selection Background (Text selection, inactive borders)
+set $base02 #504945
+# Comments / Muted Text (Faded gray)
+set $base03 #665c54
+
+# --- Foregrounds & Light Tones ---
+# Muted Foreground (Dark white / subtle text)
+set $base04 #d5c4a1
+# Default Foreground (Primary text color)
+set $base05 #ebdbb2
+# Light Foreground (High-contrast text)
+set $base06 #fbf1c7
+# Extra Light Foreground
+set $base07 #ebdbb2
+
+# --- Accent Colors (The Rainbow) ---
+# Red (Errors, urgent alerts)
+set $base08 #cc241d
+# Orange (Constants, warnings)
+set $base09 #d65d0e
+# Yellow (Highlights, classes)
+set $base0A #d79921
+# Green (Success states, strings)
+set $base0B #98971a
+# Aqua / Cyan (Operators, escape characters)
+set $base0C #689d6a
+# Blue (Functions, focused window borders)
+set $base0D #458588
+# Purple / Magenta (Keywords, structures)
+set $base0E #b16286
+# Brown / Muted Accent (Special tags, attributes)
+set $base0F #a89984
+
+## Window Colours
+client.focused           $base0E  $base0E  $base00  $base0E  $base0E
+client.focused_inactive  $base01  $base01  $base01  $base01  $base01
+client.unfocused         $base01  $base01  $base01  $base01  $base01
+client.urgent            $base07  $base00  $base08  $base0B  $base02
+client.placeholder       $base02  $base00  $base06  $base03  $base04
+client.background        $base00
+
 gaps outer 8
-gaps inner 8
+gaps inner 2
 
 include /etc/sway/config.d/*
