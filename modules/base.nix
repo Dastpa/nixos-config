@@ -1,12 +1,41 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
+    # System Utils
+    pciutils
+    usbutils
+    home-manager
+    btop
+    nixd
+    nil
+    curl
+    ncdu
+    wget
+
+    # Development
     git
     vim
-    wget
-    curl
-    htop
+    gnumake
+
+    # Apps
+    firefox
+    zed-editor
+    steam
+  ];
+
+  fonts.fontconfig.enable = true;
+  fonts.packages = with pkgs; [
+    jetbrains-mono
+    fira-code
+    fira-code-symbols
+    font-awesome
+    liberation_ttf
+    mplus-outline-fonts.githubRelease
+    # nerdfonts
+    noto-fonts
+    noto-fonts-color-emoji
+    proggyfonts
   ];
 
   programs.zsh.enable = true;
