@@ -2,7 +2,7 @@
 
 {
   programs.waybar = {
-    # enable = true;
+    enable = true;
 
     style = ''
       * {

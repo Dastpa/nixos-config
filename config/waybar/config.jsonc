@@ -1,0 +1,138 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 24,
+  "modules-left": [
+    "sway/workspaces",
+    "custom/scratchpad-indicator",
+    "custom/separator",
+    "clock",
+    "idle_inhibitor",
+  ],
+  "modules-center": ["sway/mode"],
+  "modules-right": [
+    "custom/keyboard-layout",
+    "pulseaudio",
+    "backlight",
+    "battery",
+    "custom/separator",
+    "cpu",
+    "memory",
+    "custom/separator",
+    "tray",
+  ],
+
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "",
+      "deactivated": "",
+    },
+  },
+
+  "sway/window": {
+    "max-length": 50,
+  },
+
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{percent}% {icon}",
+    "format-icons": ["", ""],
+  },
+
+  "custom/separator": {
+    "format": "|",
+    "interval": "once",
+    "tooltip": false,
+  },
+
+  "custom/keyboard-layout": {
+    "exec": "~/.config/waybar/modules/kblayout",
+    "format": "  {}",
+  },
+
+  "custom/scratchpad-indicator": {
+    "interval": 3,
+    "exec": "~/.config/waybar/modules/scratchpad_indicator",
+    "format": "{} ",
+    "on-click-right": "swaymsg 'scratchpad show'",
+    "on-click": "swaymsg 'move scratchpad'",
+  },
+
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{name}: {icon}",
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "7": "",
+      "urgent": "",
+      "focused": "",
+      "default": "",
+    },
+  },
+
+  "network": {
+    // "interface": "wlp2*", // (Optional) To force the use of this interface
+    // "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-wifi": " {signalStrength}%",
+    "format-ethernet": " {ifname}: {ipaddr}/{cidr}",
+    "format-linked": " {ifname} (No IP)",
+    "format-disconnected": "⚠ Dis",
+    "format-alt": "{ifname}: {ipaddr}/{cidr}",
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{icon} {volume}%",
+    "format-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", ""],
+    },
+    "scroll-step": 1,
+    "on-click-right": "pavucontrol",
+  },
+
+  "battery": {
+    "states": {
+      "warning": 20,
+      "critical": 10,
+    },
+    "format": "{icon} {capacity}%",
+    "format-icons": ["", "", "", "", ""],
+  },
+
+  "clock": {
+    "interval": 1,
+    "format": " {:%H:%M  | %e %b %Y}",
+    "tooltip": false,
+  },
+
+  "cpu": {
+    "interval": 5,
+    "format": " {usage}% ({load})", // Icon: microchip
+    "states": {
+      "warning": 70,
+      "critical": 90,
+    },
+  },
+
+  "memory": {
+    "interval": 30,
+    "format": " {used:0.1f}G/{total:0.1f}G",
+  },
+
+  "tray": {
+    "icon-size": 20,
+    "spacing": 5,
+  },
+}
