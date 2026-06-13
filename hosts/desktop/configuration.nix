@@ -36,7 +36,6 @@
     ../../modules/locality.nix
     ../../modules/gpu.nix
     ../../modules/sway.nix
-    # ../../modules/displaylink.nix
     ../../modules/audio.nix
     ../../modules/gaming.nix
     ../../modules/networking.nix
