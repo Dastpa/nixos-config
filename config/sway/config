@@ -15,8 +15,9 @@ set $term foot
 set $menu wmenu-run
 
 ### Output configuration
-output * bg /home/patrick/nixos-config/assets/wallpapers/bg2.png fill
-# exec mpvpaper -o "no-audio loop" * /home/patrick/nixos-config/assets/wallpapers/bg3.mp4
+output "HDMI-A-1" bg /home/patrick/nixos-config/assets/wallpapers/bg2.png fill
+output "DP-3" bg /home/patrick/nixos-config/assets/wallpapers/bg2.png fill
+exec mpvpaper -o "no-audio loop" DP-1 /home/patrick/nixos-config/assets/wallpapers/bg3.mp4
 
 output "DVI-I-1" disable
 output "DVI-I-2" disable

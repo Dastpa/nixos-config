@@ -12,6 +12,7 @@
     curl
     ncdu
     wget
+    fastfetch
 
     # Development
     git
@@ -22,6 +23,7 @@
     firefox
     zed-editor
     steam
+    prismlauncher
   ];
 
   fonts.fontconfig.enable = true;

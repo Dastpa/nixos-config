@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ ... }:
 
 {
   home.username = "patrick";
@@ -12,5 +12,6 @@
     ".config/sway/config".source = ../config/sway/config;
     ".config/waybar/config.jsonc".source = ../config/waybar/config.jsonc;
     ".config/waybar/style.css".source = ../config/waybar/style.css;
+    ".bash_aliases".source = ../config/.bash_aliases;
   };
 }

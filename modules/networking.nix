@@ -7,5 +7,8 @@
   networking = {
     hostName = "nixos";
     networkmanager.enable = true;
+    hosts = {
+      "192.168.1.153" = [ "laptop" ];
+    };
   };
 }
