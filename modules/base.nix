@@ -24,6 +24,7 @@
     zed-editor
     steam
     prismlauncher
+    discord-ptb
   ];
 
   fonts.fontconfig.enable = true;
