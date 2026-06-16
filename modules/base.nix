@@ -18,6 +18,7 @@
     git
     vim
     gnumake
+    tmux
 
     # Apps
     firefox
