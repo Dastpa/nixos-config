@@ -11,6 +11,8 @@
     nvidia = {
       package = config.boot.kernelPackages.nvidiaPackages.stable;
       modesetting.enable = true;
+      powerManagement.enable = false;
+      powerManagement.finegrained = false;
       nvidiaSettings = true;
       open = false;
     };
@@ -20,5 +22,7 @@
 
   environment.sessionVariables = {
     GBM_BACKEND = "nvidia-drm";
+    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+    LIBVA_DRIVER_NAME = "nvidia";
   };
 }
