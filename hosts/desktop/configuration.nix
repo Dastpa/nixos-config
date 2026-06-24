@@ -39,5 +39,6 @@
     ../../modules/audio.nix
     ../../modules/gaming.nix
     ../../modules/networking.nix
+    ../../modules/ai.nix
   ];
 }

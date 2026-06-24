@@ -3,6 +3,7 @@
 {
   services.xserver.videoDrivers = [ "nvidia" ];
   services.pulseaudio.support32Bit = true;
+  powerManagement.cpuFreqGovernor = "performance";
 
   hardware = {
     graphics.enable = true;
